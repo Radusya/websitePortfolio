@@ -1,0 +1,179 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<title>Porfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <script src="js/script.js"></script>
+</head>
+<body style="background-image: url(images/img1.jpg);">
+<!-- Header -->
+<header>
+    <nav class="navbar navbar-expand-lg" style="background-color: #525174;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/home.html"> <img src="images/logo.png" alt="logo" width="125" height="49"></a>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item">
+                <a class="nav-link active text-white me-5" aria-current="page" href="/home.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white me-5" href="/pricing">Pricing</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white me-5" href="/faq">FAQ</a>
+              </li>
+            </ul>
+            <a type="button" href="/contacts.html" class="btn btn-info text-white">Contacts</a>
+          </div>
+        </div>
+      </nav>
+</header>
+<!-- Header -->
+
+<!-- Content -->
+<section class="mt-5 mx-auto container-sm" style="background-color: #4E5174; border-radius: 10px;">
+    <h2 class="h1-responsive font-weight-bold text-center mt-5">Contact me</h2>
+    <p class="text-center w-responsive mx-auto mb-4">Do you have any questions?</p>
+    <div class="row mx-auto">
+        <div class="col-md-9 mb-md-0 mb-5">
+            <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="md-form mb-0">
+                            <label for="name" class="">Your name</label>
+                            <input type="text" id="name" name="name" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="md-form mb-0">
+                            <label for="email" class="">Your email</label>
+                            <input type="text" id="email" name="email" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="md-form mb-0">
+                            <label for="subject" class="">Subject</label>
+                            <input type="text" id="subject" name="subject" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+
+                        <div class="md-form">
+                            <label for="message">Your message</label>
+                            <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
+                        </div>
+
+                    </div>
+                </div>
+            </form>
+            <div class="text-center text-md-left mt-3 mb-3">
+                <a class="btn btn-primary mt-4" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="validateForm();">Send</a>
+            </div>
+
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title text-black" id="exampleModalLabel">Thank you for your message</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                    </div>
+                    <div class="modal-body text-black">
+                        expect a reply within one hour
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+
+            <div class="status mb-4"></div>
+        </div>
+        <div class="col-md-3 mt-5 text-center">
+            <ul class="list-unstyled mb-0">
+                <li><i class="fas fa-map-marker-alt fa-2x"></i>
+                    <p>Poznań, 61-897, Poland</p>
+                </li>
+
+                <li><i class="fas fa-phone mt-4 fa-2x"></i>
+                    <p>+48 574 487 302</p>
+                </li>
+
+                <li><i class="fas fa-envelope mt-4 fa-2x"></i>
+                    <p>radulya777@icloud.com</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!-- Content -->
+
+<!-- Footer -->
+<footer class="text-center text-lg-start text-white mt-5" style="background-color: #3B3D4B;">
+  <section>
+    <div class="container text-center text-md-start mt-3">
+      <div class="row mt-3">
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <h6 class="text-uppercase fw-bold mt-4 mb-4">
+            Rodion
+          </h6>
+          <p>
+            Student of Collegium Da Vinci
+          </p>
+        </div>
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <h6 class="text-uppercase fw-bold mt-4">
+            Useful links
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">Home</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Pricing</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">FAQ</a>
+          </p>
+        </div>
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <h6 class="text-uppercase fw-bold mt-4">
+            Social Networks
+          </h6>
+          <p>
+            <a href="https://github.com/Radusya" class="text-reset">Git</a>
+          </p>
+          <p>
+            <a href="https://www.linkedin.com/in/rodion-filippov-345148261/" class="text-reset">LinkedIn</a>
+          </p>
+          <p>
+            <a href="https://www.instagram.com/radulina_f/" class="text-reset">Instagram</a>
+          </p>
+        </div>
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <h6 class="text-uppercase fw-bold mt-4 ms-3">Contact</h6>
+          <p><i class="fas fa-home me-3 text-secondary"></i> Poznan, 61-897</p>
+          <p>
+            <i class="fas fa-envelope me-3 text-secondary"></i>
+            radulya777@icloud.com
+          </p>
+          <p><i class="fas fa-phone me-3 text-secondary"></i> +48 574 487 302</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="text-center p-4" style="background-color: #4E5174;">
+    © 2023 Copyright:
+    <a class="text-reset fw-bold" href="https://github.com/Radusya">Rodion</a>
+  </div>
+</footer>
+<!-- Footer -->
+</body>
+</html>
