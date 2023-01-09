@@ -3,13 +3,12 @@ body {
     font-size: 16px;
     color: #fff;
     background-color: #16B98E;
-    min-width: 1250px;
 }
 
 img {
     max-width: 100%;
-    height: auto;
-}
+    display: block;
+  }
 
  
 section {
@@ -30,6 +29,34 @@ section {
     animation: fade .9s ease;
 }
 
+@media (max-width: 767px) {
 
-   
+}
+
+@media (min-width: 768px) {
+    .card {
+        margin-left: 17%;
+        width: 70%;
+    }
+}
+
+@media (max-width: 991px) {
+
+}
+
+@media (min-width: 992px) {
+    .card {
+        width: 30%;
+        margin-left: 1%;
+        margin-right: 1%;
+
+    }
+    .row {
+        margin-left: 3%;
+    }
+ }
+
+
+
+
 
