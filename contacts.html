@@ -44,13 +44,13 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="md-form mb-0">
-                            <label for="name" class="">Your name</label>
+                            <label for="name" class="name">Your name</label>
                             <input type="text" id="name" name="name" class="form-control">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="md-form mb-0">
-                            <label for="email" class="">Your email</label>
+                            <label for="email" class="mail">Your email</label>
                             <input type="text" id="email" name="email" class="form-control">
                         </div>
                     </div>
@@ -58,16 +58,15 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="md-form mb-0">
-                            <label for="subject" class="">Subject</label>
+                            <label for="subject" class="subject">Subject</label>
                             <input type="text" id="subject" name="subject" class="form-control">
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-
                         <div class="md-form">
-                            <label for="message">Your message</label>
+                            <label for="message" class="mes">Your message</label>
                             <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
                         </div>
 
@@ -75,29 +74,26 @@
                 </div>
             </form>
             <div class="text-center text-md-left mt-3 mb-3">
-                <a class="btn btn-info text-white mt-4" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="validateForm();">Send</a>
+                <a class="btn btn-info text-white mt-4" id="btnsend" data-bs-toggle="modal" data-bs-target="#popup" onclick="validateForm();">Send</a>
             </div>
 
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title text-black" id="exampleModalLabel">Thank you for your message</h5>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+            <div class="modal fade" id="popup" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" style="background-color: #4E5174; border-radius: 10px;">
+                  <div class="modal-content" style="background-color: #4E5174; border-radius: 10px;">
+                    <div class="modal-header" style="background-color: #4E5174; border-radius: 10px;">
+                      <h5 class="modal-title text-white" id="exampleModalLabel">Thank you for your message</h5>
                     </div>
-                    <div class="modal-body text-black">
-                        expect a reply within one hour
+                    <div class="modal-body text-white">
+                        Expect a reply within one hour
                     </div>
                     <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-info text-white" data-bs-dismiss="modal">Close</button>
                     </div>
                   </div>
                 </div>
-              </div>
-              
-
-            <div class="status mb-4"></div>
+              </div>   
         </div>
+        
         <div class="col-md-3 mt-5 text-center">
             <ul class="list-unstyled mb-0">
                 <li><i class="fas fa-map-marker-alt fa-2x"></i>
