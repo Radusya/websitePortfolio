@@ -3,7 +3,6 @@ body {
     font-size: 16px;
     height: 100%;
     color: #fff;
-    background-color: #16B98E;
 }
 
 
@@ -16,6 +15,16 @@ img {
 section {
     padding: 50px, 0;
 }
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.navbar-toggler {
+    color: #fff;
+  } 
 
 
 @keyframes fade {
@@ -32,11 +41,34 @@ section {
     animation: fade .9s ease;
 }
 
+@media (min-width: 375px) {
+    #logo {
+        margin-left: 8%;
+    }
+}
 
 @media (min-width: 768px) {
     .card {
         margin-left: 15%;
         width: 70%;
+    }
+
+    #logo {
+        margin-left: 7%;
+    }
+
+    #blocks {
+        margin-top: 5%;
+    }
+}
+
+@media (max-width: 900px) {
+    #fonimg {
+        display: none;
+    }
+
+    #blocks {
+        margin-top: 20%;
     }
 }
 
@@ -49,6 +81,14 @@ section {
     }
     .row {
         margin-left: 3%;
+    }
+
+    #blocks {
+        margin-top: 5%;
+    }
+
+    #logo {
+        margin-left: 0%;
     }
  }
 

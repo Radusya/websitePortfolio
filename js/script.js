@@ -10,10 +10,6 @@ function viewDiv(){
     
   };
 
-  function closeModal(){
-    document.querySelector('.modal').style.display = "none";
-  };
-
   function validateForm() {
     var name =  document.getElementById('name').value;
     if (name == "") {
