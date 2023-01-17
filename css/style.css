@@ -45,6 +45,10 @@ section {
     #logo {
         margin-left: 8%;
     }
+
+    #carouselExampleIndicators {
+        margin-top: 10%;
+    }
 }
 
 @media (min-width: 768px) {
@@ -59,6 +63,12 @@ section {
 
     #blocks {
         margin-top: 5%;
+    }
+}
+
+@media (min-width: 900px) {
+    #carouselExampleIndicators {
+        margin-top: 0%;
     }
 }
 
