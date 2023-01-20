@@ -44,8 +44,69 @@ function validateForm() {
     }
 };
 
-function RangeMonth() {
+function CheckBox(id) {
+    document.getElementById('customRange3').value = 0;
+    document.getElementById('rangeval').innerText = `1 hour`;
+    switch (id) {
+        case fe:
+            document.getElementById('price').innerText = `~30 zł`;
+            break;
+        case be:
+            document.getElementById('price').innerText = `~40 zł`;
+            break;
+        case pm:
+            document.getElementById('price').innerText = `~80 zł`;
+            break;
+    }
+};
+
+function RangeSlider() {
     var val = parseInt(document.getElementById('customRange3').value);
-    document.getElementById('rangeval').innerText = `${val + 1} month`;
+    var backendPrice = 40;
+    var frontendPrice = 30;
+    var pmPrice = 80;
+    var cur = 0;
+
+    if (document.querySelector('.fe').checked) {
+        document.getElementById('price').innerText = `~${frontendPrice * (val + 1)} zł`
+        document.querySelector('.fer').placeholder = `Front-end: ${frontendPrice * (val + 1)} zł`;
+    }
+    if (document.querySelector('.be').checked) {
+        document.getElementById('price').innerText = `~${backendPrice * (val + 1)} zł`
+        document.querySelector('.ber').placeholder = `Back-end: ${backendPrice * (val + 1)} zł`;
+    }
+    if (document.querySelector('.pm').checked) {
+        document.getElementById('price').innerText = `~${pmPrice * (val + 1)} zł`
+        document.querySelector('.pmr').placeholder = `PM: ${pmPrice * (val + 1)} zł`;
+    }
+
+    document.getElementById('rangeval').innerText = `${val + 1} hour`;
     if (val != 0) document.getElementById('rangeval').innerText += `s`;
 };
+
+function Reset(id) {
+    document.getElementById('customRange3').value = 0;
+    document.getElementById('rangeval').innerText = `1 hour`;
+    switch (id) {
+        case resber:
+            document.querySelector('.ber').placeholder = `Back-end: 0 zł`;
+            if (document.querySelector('.be').checked) {
+                document.getElementById('price').innerText = `~40 zł` 
+            }
+            break;
+        case resfer:
+            document.querySelector('.fer').placeholder = `Front-end: 0 zł`;
+            if (document.querySelector('.fe').checked) {
+                document.getElementById('price').innerText = `~30 zł`
+            }
+            break;
+        case respmr:
+            document.querySelector('.pmr').placeholder = `PM: 0 zł`;
+            if (document.querySelector('.pm').checked) {
+                document.getElementById('price').innerText = `~80 zł`
+            }
+            break;
+
+    }
+};
+

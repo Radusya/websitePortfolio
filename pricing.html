@@ -19,40 +19,101 @@
     <img id="fonimg" src="images/img1.jpg" alt="fon" width="100%" height="auto">
 
     <!-- Content -->
-    <h4 class="text-center mt-3">Pricing</h4>
-    <div class="container mt-3" style="background-color: #525174; border-radius: 10px;">
+    <h4 class="text-center mt-5">Pricing</h4>
+    <div class="container mt-3" id="calculator">
         <br>
-        <div class="row" style="margin-left:18%;">
+        <div class="row justify-content-around mt-3">
             <div class="form-check col">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                <input class="form-check-input fe" id="fe" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
+                    onChange="CheckBox(fe)" checked>
                 <label class="form-check-label" for="flexRadioDefault2">
-                    Front-end
+                    Front-end develop
                 </label>
             </div>
             <div class="form-check col">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                <input class="form-check-input be" id="be" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
+                    onChange="CheckBox(be)">
                 <label class="form-check-label" for="flexRadioDefault2">
-                    Back-end
+                    Back-end develop
                 </label>
             </div>
             <div class="form-check col">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                <input class="form-check-input pm" id="pm" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
+                    onChange="CheckBox(pm)">
                 <label class="form-check-label" for="flexRadioDefault2">
                     Project-managment
                 </label>
             </div>
         </div>
-        <div class="container">
+        <div class="container mt-3">
             <form>
-              <div class="form-group">
-                <label for="formControlRange">Example Range input</label>
-                <input type="range" class="form-range" min="0" max="11" step="1" id="customRange3" 
-                  onInput="RangeMonth()">
-                <span id="rangeval"></span>
-              </div>
-            </form>
-          </div>
+                <div class="form-group text-center">
+                    <label for="formControlRange">Time</label>
+                    <input type="range" class="form-range" min="0" max="49" step="1" value="0" id="customRange3"
+                        onInput="RangeSlider()">
+                    <div class="row mx-auto justify-content-around mt-3">
+                        <div class="col-4 calc">
+                            <span id="rangeval">1 hour</span>
+                        </div>
+                        <div class="col-4 calc">
+                            <span id="price">~30 zł</span>
+                        </div>
+                    </div>
+                    <div class="container-fluid mt-5">
+                        <div class="row mt-3 mx-auto">
+                            <div class="col mx-auto">
+                                <input class="form-control fer res" id="floatingInputDisabled" placeholder="Front-end: 0 zł"
+                                    disabled>
+                            </div>
+                            <div class="col my-auto">
+                                <a class="btn text-white mb-3" id="resfer" onclick="Reset(resfer)"
+                                    style="margin-right: 90%; background-color: #64D0B1;"><i
+                                        class="fa-solid fa-xmark fa-2xl"></i></a>
+                            </div>
+                        </div>
+                        <div class="row mt-3 mx-auto">
+                            <div class="col mx-auto">
+                                <input class="form-control ber res" id="floatingInputDisabled" placeholder="Back-end: 0 zł"
+                                    disabled>
+                            </div>
+                            <div class="col my-auto">
+                                <a class="btn text-white mb-3" id="resber" onclick="Reset(resber)"
+                                    style="margin-right: 90%; background-color: #64D0B1;"><i
+                                        class="fa-solid fa-xmark fa-2xl"></i></a>
+                            </div>
+                        </div>
+                        <div class="row mt-3 mx-auto">
+                            <div class="col mx-auto">
+                                <input class="form-control pmr res" id="floatingInputDisabled" placeholder="PM: 0 zł"
+                                    disabled>
+                            </div>
+                            <div class="col my-auto">
+                                <a class="btn text-white mb-3" id="respmr" onclick="Reset(respmr)"
+                                    style="margin-right: 90%; background-color: #64D0B1;"><i
+                                        class="fa-solid fa-xmark fa-2xl"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <br>
+        </form>
     </div>
+    <div class="col-md-3 mt-5 text-center mx-auto">
+        <ul class="list-unstyled mb-0">
+          <li><i class="fas fa-map-marker-alt fa-2x"></i>
+            <p>Poznań, 61-897, Poland</p>
+          </li>
+    
+          <li><i class="fas fa-phone mt-4 fa-2x"></i>
+            <p>+48 574 487 302</p>
+          </li>
+    
+          <li><i class="fas fa-envelope mt-4 fa-2x"></i>
+            <p>radulya777@icloud.com</p>
+          </li>
+        </ul>
+      </div>
     <!-- Content -->
 
     <!-- Footer -->
