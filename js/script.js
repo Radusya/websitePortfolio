@@ -11,6 +11,9 @@ function viewDiv() {
 };
 
 function validateForm() {
+    var myModal = new bootstrap.Modal(document.getElementById('popup'), {
+        keyboard: false
+      })
     var name = document.getElementById('name').value;
     if (name == "") {
         document.querySelector('.name').innerHTML = "Name cannot be empty";
@@ -42,6 +45,7 @@ function validateForm() {
         document.querySelector('.mes').style.color = "#FF0000";
         return false;
     }
+      myModal.toggle()
 };
 
 function CheckBox(id) {
