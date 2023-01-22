@@ -1,3 +1,5 @@
+var sum = [0, 0, 0];
+
 function viewDiv() {
     const button = document.getElementById('but');
     if (document.getElementById("divmore").style.display == "none") {
@@ -13,7 +15,7 @@ function viewDiv() {
 function validateForm() {
     var myModal = new bootstrap.Modal(document.getElementById('popup'), {
         keyboard: false
-      })
+    })
     var name = document.getElementById('name').value;
     if (name == "") {
         document.querySelector('.name').innerHTML = "Name cannot be empty";
@@ -45,7 +47,7 @@ function validateForm() {
         document.querySelector('.mes').style.color = "#FF0000";
         return false;
     }
-      myModal.toggle()
+    myModal.toggle()
 };
 
 function CheckBox(id) {
@@ -69,21 +71,24 @@ function RangeSlider() {
     var backendPrice = 40;
     var frontendPrice = 30;
     var pmPrice = 80;
-    var cur = 0;
 
     if (document.querySelector('.fe').checked) {
         document.getElementById('price').innerText = `~${frontendPrice * (val + 1)} zł`
         document.querySelector('.fer').placeholder = `Front-end: ${frontendPrice * (val + 1)} zł`;
+        sum[0] = frontendPrice * (val + 1);
     }
     if (document.querySelector('.be').checked) {
         document.getElementById('price').innerText = `~${backendPrice * (val + 1)} zł`
         document.querySelector('.ber').placeholder = `Back-end: ${backendPrice * (val + 1)} zł`;
+        sum[1] = backendPrice * (val + 1);
     }
     if (document.querySelector('.pm').checked) {
         document.getElementById('price').innerText = `~${pmPrice * (val + 1)} zł`
         document.querySelector('.pmr').placeholder = `PM: ${pmPrice * (val + 1)} zł`;
+        sum[2] = pmPrice * (val + 1);
     }
 
+    document.querySelector('.sum').innerHTML = `Summary: ~${sum[0] + sum[1] + sum[2]} zł`;
     document.getElementById('rangeval').innerText = `${val + 1} hour`;
     if (val != 0) document.getElementById('rangeval').innerText += `s`;
 };
@@ -94,23 +99,28 @@ function Reset(id) {
     switch (id) {
         case resber:
             document.querySelector('.ber').placeholder = `Back-end: 0 zł`;
+            sum[1] = 0;
+            document.querySelector('.sum').innerHTML = `Summary: ~${sum[0] + sum[1] + sum[2]} zł`;
             if (document.querySelector('.be').checked) {
-                document.getElementById('price').innerText = `~40 zł` 
+                document.getElementById('price').innerText = `~40 zł`
             }
             break;
         case resfer:
             document.querySelector('.fer').placeholder = `Front-end: 0 zł`;
+            sum[0] = 0;
+            document.querySelector('.sum').innerHTML = `Summary: ~${sum[0] + sum[1] + sum[2]} zł`;
             if (document.querySelector('.fe').checked) {
                 document.getElementById('price').innerText = `~30 zł`
             }
             break;
         case respmr:
             document.querySelector('.pmr').placeholder = `PM: 0 zł`;
+            sum[2] = 0;
+            document.querySelector('.sum').innerHTML = `Summary: ~${sum[0] + sum[1] + sum[2]} zł`;
             if (document.querySelector('.pm').checked) {
                 document.getElementById('price').innerText = `~80 zł`
             }
             break;
-
     }
 };
 
