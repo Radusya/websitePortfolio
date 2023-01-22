@@ -2,12 +2,12 @@ var sum = [0, 0, 0];
 
 function viewDiv() {
     const button = document.getElementById('but');
-    if (document.getElementById("divmore").style.display == "none") {
-        document.getElementById("divmore").style.display = "block";
-        button.innerText = "↑";
-    } else {
-        document.getElementById("divmore").style.display = "none";
+    if (document.getElementById("collapseExample").value == "dropped") {
         button.innerText = "↓";
+        document.getElementById("collapseExample").value = "none";
+    } else {
+        button.innerText = "↑";
+        document.getElementById("collapseExample").value = "dropped";
     }
 
 };
