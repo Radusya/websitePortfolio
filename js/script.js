@@ -12,6 +12,16 @@ function viewDiv() {
 
 };
 
+function contactsFix() {
+    if(document.querySelector('.navbar-toggler').value == "dropped"){
+        document.querySelector('.con').className = "nav-link text-white me-5 con";
+        document.querySelector('.navbar-toggler').value = "none";
+    } else {
+        document.querySelector('.con').className = "btn btn-info text-white con";
+        document.querySelector('.navbar-toggler').value = "dropped";
+    } 
+};
+
 function validateForm() {
     var myModal = new bootstrap.Modal(document.getElementById('popup'), {
         keyboard: false
